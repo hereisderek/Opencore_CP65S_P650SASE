@@ -14,7 +14,7 @@
 	<string>https://docs.google.com/spreadsheets/d/1kGFz3_kp5xCDRRQpfnIUOvbiHXTmxEgyx97u73ImXXE/edit#gid=0</string>
 	<key>ACPI</key>
 	<dict>
-		<key>Add</key>
+		<key>#Add</key>
 		<array>
 			<dict>
 				<key>Comment</key>
@@ -96,13 +96,64 @@
 				<key>Path</key>
 				<string>SSDT-RTC0.aml</string>
 			</dict>
+		</array>
+		<key>Add</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>My custom DSDT</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>DSDT.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>plugin-type=1</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-PLUG.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-SBUS-MCHC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Notebook brightness</string>
+				<key>Enabled</key>
+				<false/>
+				<key>Path</key>
+				<string>SSDT-PNLF.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EC.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-EHCx_OFF.aml</string>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
-				<string>SSDT-ALS0.aml</string>
+				<string>SSDT-RTC0.aml</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -247,7 +298,7 @@
 			<key>ProtectCsmRegion</key>
 			<false/>
 			<key>ProvideCustomSlide</key>
-			<true/>
+			<false/>
 			<key>SetupVirtualMap</key>
 			<true/>
 			<key>ShrinkMemoryMap</key>
@@ -363,11 +414,43 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
-				<string>Legacy_USB3.kext</string>
+				<string>RealtekRTL8111.kext</string>
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>AirportBrcmFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
+				<string>HibernationFixup.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
@@ -404,15 +487,15 @@
 		<array>
 			<dict>
 				<key>Base</key>
-				<string>__ZN8AppleRTC18setupDateTimeAlarmEPK11RTCDateTime</string>
+				<string></string>
 				<key>Comment</key>
-				<string>Disable RTC wake scheduling</string>
+				<string></string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data></data>
+				<data>dS4Ptg==</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleRTC</string>
 				<key>Limit</key>
@@ -422,9 +505,9 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>19.0.0</string>
+				<string></string>
 				<key>Replace</key>
-				<data>ww==</data>
+				<data>6y4Ptg==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -432,15 +515,15 @@
 			</dict>
 			<dict>
 				<key>Base</key>
-				<string>__ZN8AppleRTC14updateChecksumEv</string>
+				<string></string>
 				<key>Comment</key>
-				<string>Disable RTC checksum update on poweroff</string>
+				<string></string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
 				<false/>
 				<key>Find</key>
-				<data></data>
+				<data>dTMPtw==</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleRTC</string>
 				<key>Limit</key>
@@ -448,11 +531,11 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>18.5.0</string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>18.5.0</string>
 				<key>Replace</key>
-				<data>ww==</data>
+				<data>6zMPtw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -462,7 +545,7 @@
 				<key>Base</key>
 				<string>_AcpiOsVprintf</string>
 				<key>Comment</key>
-				<string>Disable ACPI logging</string>
+				<string></string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
@@ -532,13 +615,13 @@
 			<key>LapicKernelPanic</key>
 			<false/>
 			<key>PanicNoKextDump</key>
-			<false/>
+			<true/>
 			<key>PowerTimeoutKernelPanic</key>
-			<false/>
-			<key>ThirdPartyDrives</key>
+			<true/>
+			<key>ThirdPartyTrim</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>Misc</key>
@@ -556,7 +639,7 @@
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>HideSelf</key>
-			<true/>
+			<false/>
 			<key>PollAppleHotKeys</key>
 			<false/>
 			<key>Resolution</key>
@@ -577,7 +660,7 @@
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
 			<key>Target</key>
-			<integer>3</integer>
+			<integer>19</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -596,18 +679,20 @@
 		</array>
 		<key>Security</key>
 		<dict>
+			<key>#ScanPolicy</key>
+			<integer>983299</integer>
 			<key>AllowNvramReset</key>
-			<false/>
+			<true/>
 			<key>ExposeSensitiveData</key>
 			<integer>6</integer>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>RequireSignature</key>
-			<true/>
+			<false/>
 			<key>RequireVault</key>
-			<true/>
+			<false/>
 			<key>ScanPolicy</key>
-			<integer>983299</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -617,7 +702,7 @@
 				<key>Comment</key>
 				<string>Not signed for security reasons</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Name</key>
 				<string>UEFI Shell</string>
 				<key>Path</key>
@@ -648,12 +733,12 @@
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
+				<key>#nvda_drv</key>
+				<data>MQ==</data>
 				<key>boot-args</key>
 				<string>-v keepsyms=1</string>
 				<key>csr-active-config</key>
-				<data>AAAAAA==</data>
-				<key>nvda_drv</key>
-				<data>MQ==</data>
+				<data>MAAAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>cnUtUlU6MjUy</data>
 			</dict>
@@ -700,38 +785,7 @@
 	<key>PlatformInfo</key>
 	<dict>
 		<key>Automatic</key>
-		<false/>
-		<key>DataHub</key>
-		<dict>
-			<key>ARTFrequency</key>
-			<integer>0</integer>
-			<key>BoardProduct</key>
-			<string>Mac-F221BEC8</string>
-			<key>BoardRevision</key>
-			<data>AQ==</data>
-			<key>DevicePathsSupported</key>
-			<integer>1</integer>
-			<key>FSBFrequency</key>
-			<integer>0</integer>
-			<key>InitialTSC</key>
-			<integer>0</integer>
-			<key>PlatformName</key>
-			<string>platform</string>
-			<key>SmcBranch</key>
-			<data>AAAAAAAAAAA=</data>
-			<key>SmcPlatform</key>
-			<data>AAAAAAAAAAA=</data>
-			<key>SmcRevision</key>
-			<data>ATkPAAAF</data>
-			<key>StartupPowerEvents</key>
-			<integer>0</integer>
-			<key>SystemProductName</key>
-			<string>MacPro5,1</string>
-			<key>SystemSerialNumber</key>
-			<string>W0000000001</string>
-			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
-		</dict>
+		<true/>
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
@@ -741,83 +795,11 @@
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>MacPro5,1</string>
+			<string>MacBookPro11,3</string>
 			<key>SystemSerialNumber</key>
 			<string>W0000000001</string>
 			<key>SystemUUID</key>
 			<string>00000000-0000-0000-0000-000000000000</string>
-		</dict>
-		<key>PlatformNVRAM</key>
-		<dict>
-			<key>BID</key>
-			<string>Mac-F221BEC8</string>
-			<key>FirmwareFeatures</key>
-			<data>N+EP6AAAAAA=</data>
-			<key>FirmwareFeaturesMask</key>
-			<data>P/8f/wAAAAA=</data>
-			<key>MLB</key>
-			<string>M000000000001</string>
-			<key>ROM</key>
-			<data>ESIzAAAA</data>
-		</dict>
-		<key>SMBIOS</key>
-		<dict>
-			<key>BIOSReleaseDate</key>
-			<string>04/12/2019</string>
-			<key>BIOSVendor</key>
-			<string></string>
-			<key>BIOSVersion</key>
-			<string>144.0.0.0.0</string>
-			<key>BoardAssetTag</key>
-			<string></string>
-			<key>BoardLocationInChassis</key>
-			<string>Part Component</string>
-			<key>BoardManufacturer</key>
-			<string></string>
-			<key>BoardProduct</key>
-			<string>Mac-F221BEC8</string>
-			<key>BoardSerialNumber</key>
-			<string>M000000000001</string>
-			<key>BoardType</key>
-			<integer>11</integer>
-			<key>BoardVersion</key>
-			<string>MacPro5,1</string>
-			<key>ChassisAssetTag</key>
-			<string></string>
-			<key>ChassisManufacturer</key>
-			<string></string>
-			<key>ChassisSerialNumber</key>
-			<string>W0000000001</string>
-			<key>ChassisType</key>
-			<integer>7</integer>
-			<key>ChassisVersion</key>
-			<string>Mac-F221BEC8</string>
-			<key>FirmwareFeatures</key>
-			<data>N+EP6AAAAAA=</data>
-			<key>FirmwareFeaturesMask</key>
-			<data>P/8f/wAAAAA=</data>
-			<key>MemoryFormFactor</key>
-			<integer>9</integer>
-			<key>PlatformFeature</key>
-			<integer>0</integer>
-			<key>ProcessorType</key>
-			<integer>0</integer>
-			<key>SmcVersion</key>
-			<data>AAAAAAAAAAAAAAAAAAAAAA==</data>
-			<key>SystemFamily</key>
-			<string>MacPro</string>
-			<key>SystemManufacturer</key>
-			<string></string>
-			<key>SystemProductName</key>
-			<string>MacPro5,1</string>
-			<key>SystemSKUNumber</key>
-			<string>Mac-F221BEC8</string>
-			<key>SystemSerialNumber</key>
-			<string>W0000000001</string>
-			<key>SystemUUID</key>
-			<string>00000000-0000-0000-0000-000000000000</string>
-			<key>SystemVersion</key>
-			<string>1.1</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -835,6 +817,7 @@
 		<key>Drivers</key>
 		<array>
 			<string>HfsPlus.efi</string>
+			<string>UsbKbDxe.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
 			<string>VirtualSmc.efi</string>
@@ -896,21 +879,17 @@
 			<key>IgnoreTextInGraphics</key>
 			<false/>
 			<key>ProvideConsoleGop</key>
-			<false/>
+			<true/>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReleaseUsbOwnership</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
 			<false/>
-			<key>RequestBootVarFallback</key>
-			<false/>
 			<key>RequestBootVarRouting</key>
-			<true/>
+			<false/>
 			<key>SanitiseClearScreen</key>
-			<false/>
-			<key>UnblockFsConnect</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 </dict>
