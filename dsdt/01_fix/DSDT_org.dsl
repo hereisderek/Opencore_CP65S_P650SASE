@@ -4296,8 +4296,6 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                     Name (_UID, Zero)  // _UID: Unique ID
                     Name (BUF0, ResourceTemplate ()
                     {
-                        // mod: assign irq
-                        IRQNoFlags(){0,8,11} // on mac 0, 8
                         Memory32Fixed (ReadWrite,
                             0xFED00000,         // Address Base
                             0x00000400,         // Address Length
@@ -4312,12 +4310,6 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                                 Return (0x0F)
                             }
                         }
-                        
-                        If (_OSI ("Darwin"))
-                        {
-                            Return (0x0F)
-                        }
-                        
                         ElseIf (HPAE)
                         {
                             Return (0x0B)
@@ -4666,12 +4658,10 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                             0x0070,             // Range Minimum
                             0x0070,             // Range Maximum
                             0x01,               // Alignment
-                            
-                            // 0x02,               // Length // mod
-                            0x08,               // Length 
+                            0x08,               // Length
                             )
-                        // mod
-                        // IRQNoFlags (){8}
+                        IRQNoFlags ()
+                            {8}
                     })
                 }
 
@@ -4692,7 +4682,8 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                             0x10,               // Alignment
                             0x04,               // Length
                             )
-                        // IRQNoFlags (){0} // ,od
+                        IRQNoFlags ()
+                            {0}
                     })
                 }
 
@@ -12374,11 +12365,6 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                 If (_OSI ("Windows 2015"))
                 {
                     OSYS = 0x07DF
-                }
-                
-                If (_OSI ("Darwin"))
-                {
-                    OSYS = 0x2710
                 }
             }
             ElseIf (MCTH (_OS, "Linux"))
