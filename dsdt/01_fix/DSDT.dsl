@@ -4297,7 +4297,7 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                     Name (BUF0, ResourceTemplate ()
                     {
                         // mod: assign irq
-                        IRQNoFlags(){0,8,11} // on mac 0, 8
+                        IRQNoFlags(){2,8,11} // on mac 0, 8
                         Memory32Fixed (ReadWrite,
                             0xFED00000,         // Address Base
                             0x00000400,         // Address Length
@@ -4671,7 +4671,8 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                             0x08,               // Length 
                             )
                         // mod
-                        // IRQNoFlags (){8}
+                        // IRQNoFlags (){8} // original
+                        IRQNoFlags (){3} // original
                     })
                 }
 
@@ -4692,7 +4693,8 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
                             0x10,               // Alignment
                             0x04,               // Length
                             )
-                        // IRQNoFlags (){0} // ,od
+                        IRQNoFlags (){0} // original value
+                        // IRQNoFlags (){1} // mod
                     })
                 }
 
@@ -16835,8 +16837,23 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
     {
         Device (EC)
         {
+            // mod
             Name (_HID, EisaId ("PNP0C09") /* Embedded Controller Device */)  // _HID: Hardware ID
             // Name (_HID, "ACID0001")
+            /*
+            Method (_HID, 0, NotSerialized) {
+                If (_OSI ("Darwin"))
+                {
+                    Return ("ACID0001")
+                }
+                Else
+                {
+                    Return (EisaId ("PNP0C09"))
+                }
+            }
+            */
+            Name (_STA, 0x0F)  // mod: added
+            
             Name (_GPE, 0x17)  // _GPE: General Purpose Events
             Name (ECOK, Zero)
             Name (SLFG, Zero)
