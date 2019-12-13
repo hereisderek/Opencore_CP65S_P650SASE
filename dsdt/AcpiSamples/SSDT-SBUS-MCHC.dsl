@@ -42,7 +42,7 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "MCHCSBUS", 0x00000000)
         }
     }
 
-    /*
+
     Method (DTGP, 5, NotSerialized)
     {
         If ((Arg0 == ToUUID ("a0b5b7c6-1318-441c-b0c9-fe695eaf949b")))
@@ -71,6 +71,5 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "MCHCSBUS", 0x00000000)
             }
         Return (Zero)
     }
-    */
 }
 

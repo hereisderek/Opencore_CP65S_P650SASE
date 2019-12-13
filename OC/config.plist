@@ -18,25 +18,17 @@
 				<key>Comment</key>
 				<string>plugin-type=1</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
-				<string>SSDT-PLUG.aml</string>
+				<string>SSDT-XCPM.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string></string>
+				<string>missing devices</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Path</key>
-				<string>SSDT-SBUS-MCHC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Notebook brightness</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-PNLF.aml</string>
+				<string>SSDT-DEVS.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -50,41 +42,9 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-EHCx_OFF.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-AWAC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-RTC0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-ALS0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
-				<string>SSDT-HPET.aml</string>
+				<string>SSDT-EHCx_OFF.aml</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -95,7 +55,7 @@
 				<key>Comment</key>
 				<string>Drop CpuPm</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>OemTableId</key>
 				<data>Q3B1UG0AAAA=</data>
 				<key>TableLength</key>
@@ -109,7 +69,7 @@
 				<key>Comment</key>
 				<string>Drop Cpu0Ist</string>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>OemTableId</key>
 				<data>Q3B1MElzdAA=</data>
 				<key>TableLength</key>
@@ -258,7 +218,7 @@
 			<key>NormalizeHeaders</key>
 			<false/>
 			<key>RebaseRegions</key>
-			<false/>
+			<true/>
 			<key>ResetHwSig</key>
 			<false/>
 			<key>ResetLogoStatus</key>
@@ -307,7 +267,7 @@
 			<key>ProtectCsmRegion</key>
 			<false/>
 			<key>ProvideCustomSlide</key>
-			<true/>
+			<false/>
 			<key>SetupVirtualMap</key>
 			<true/>
 			<key>ShrinkMemoryMap</key>
@@ -600,7 +560,7 @@
 			<key>ThirdPartyDrives</key>
 			<false/>
 			<key>XhciPortLimit</key>
-			<false/>
+			<true/>
 		</dict>
 	</dict>
 	<key>Misc</key>
@@ -621,9 +581,9 @@
 			<key>HideSelf</key>
 			<true/>
 			<key>PollAppleHotKeys</key>
-			<false/>
+			<true/>
 			<key>Resolution</key>
-			<string></string>
+			<string>1920x1080</string>
 			<key>ShowPicker</key>
 			<true/>
 			<key>Timeout</key>
@@ -640,7 +600,7 @@
 			<key>DisplayLevel</key>
 			<integer>2147483714</integer>
 			<key>Target</key>
-			<integer>83</integer>
+			<integer>76</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -738,7 +698,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100 </string>
+				<string>-v keepsyms=1 debug=0x100</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>nvda_drv</key>
@@ -795,7 +755,7 @@
 		<key>Generic</key>
 		<dict>
 			<key>MLB</key>
-			<string>M000000000001</string>
+			<string>C02553802QXF1YJ1M</string>
 			<key>ROM</key>
 			<data>ESIzAAAA</data>
 			<key>SpoofVendor</key>
@@ -803,7 +763,7 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro9,2</string>
 			<key>SystemSerialNumber</key>
-			<string>W0000000001</string>
+			<string>C02QX0VVDTY3</string>
 			<key>SystemUUID</key>
 			<string>00000000-0000-0000-0000-000000000000</string>
 		</dict>
@@ -824,9 +784,10 @@
 		<array>
 			<string>HfsPlus.efi</string>
 			<string>ApfsDriverLoader.efi</string>
-			<string>FwRuntimeServices.efi</string>
+			<string>#FwRuntimeServices.efi</string>
 			<string>VirtualSmc.efi</string>
 			<string>UsbKbDxe.efi</string>
+			<string>AptioMemoryFix.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
@@ -835,13 +796,13 @@
 			<key>KeyMergeThreshold</key>
 			<integer>2</integer>
 			<key>KeySupport</key>
-			<true/>
+			<false/>
 			<key>KeySupportMode</key>
 			<string>Auto</string>
 			<key>KeySwap</key>
 			<false/>
 			<key>PointerSupport</key>
-			<false/>
+			<true/>
 			<key>#PointerSupportMode</key>
 			<string>ASUS</string>
 			<key>TimerResolution</key>
@@ -868,9 +829,9 @@
 			<key>FirmwareVolume</key>
 			<true/>
 			<key>HashServices</key>
-			<false/>
-			<key>UnicodeCollation</key>
 			<true/>
+			<key>UnicodeCollation</key>
+			<false/>
 		</dict>
 		<key>Quirks</key>
 		<dict>
@@ -881,7 +842,7 @@
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
 			<key>IgnoreInvalidFlexRatio</key>
-			<false/>
+			<true/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
 			<key>ProvideConsoleGop</key>
@@ -897,7 +858,7 @@
 			<key>RequestBootVarRouting</key>
 			<true/>
 			<key>SanitiseClearScreen</key>
-			<false/>
+			<true/>
 			<key>UnblockFsConnect</key>
 			<false/>
 		</dict>

@@ -12121,6 +12121,11 @@ DefinitionBlock ("", "DSDT", 2, "HASEE ", "PARADISE", 0x00000038)
 
     Method (PNOT, 0, Serialized)
     {
+        // mod: no-op on mac
+        If (_OSI ("Darwin")) { 
+            Return (0) 
+        }
+        
         If (CondRefOf (\_SB.PCCD.PENB))
         {
             Notify (\_SB.PCCD, 0x82) // Device-Specific Change
