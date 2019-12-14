@@ -351,8 +351,8 @@
 				<data>BwAmDQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
-				<key>AAPL00,override-no-connect</key>
-				<data>AP///////wAw5E8EAAAAAAAYAQSVIxN46gz1oFtVkiYMUFQAAAABAQEBAQEBAQEBAQEBAQEBLjaAoHA4H0AwIDUA4A4RAAAYMT+AoHA4H0AwIDUA4A4RAAAYOEiAoHA4H0AwIDUA4A4RAAAYAAAAEAAAAAAAAAAAAAAAAAAAAN8=</data>
+				<key>#AAPL00,override-no-connect</key>
+				<data>AP///////wAw5E8EAAAAAAAYAQSVIxN46gz1oFtVkiYMUFQAAAABAQEBAQEBAQEBAQEBAQEBuUOAoHA4H0AwIDUA4A4RAAAYWE2AGHE4LUBYLEUA4A4RAAAeLlKAGHE4LUBYLEUA4A4RAAAeAAAAEAAAAAAAAAAAAAAAAAAAAHA=</data>
 				<key>device-id</key>
 				<data>Jg0AAA==</data>
 				<key>device_type</key>
@@ -367,6 +367,8 @@
 				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel HD Graphics 530</string>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wAGEHycAAAAAAoWAQSVIxN46gz1oFtVkiYMUFQAAAABAQEBAQEBAQEBAQEBAQEBuUOAoHA4H0AwIGQA4A4RAAAYWE2AGHE4LUBYLEUA4A4RAAAeLlKAGHE4LUBYLEUA4A4RAAAeAAAAEAAAAAAAAAAAAAAAAAAAAHI=</data>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -571,7 +573,7 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/DisplayMergeNub</string>
 				<key>BundlePath</key>
@@ -876,7 +878,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 debug=0x100</string>
+				<string>-v keepsyms=1 debug=0x100 -x</string>
 				<key>csr-active-config</key>
 				<data>5wMAAA==</data>
 				<key>nvda_drv</key>
