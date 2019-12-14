@@ -856,10 +856,12 @@
 		<array>
 			<string>HfsPlus.efi</string>
 			<string>ApfsDriverLoader.efi</string>
-			<string>#FwRuntimeServices.efi</string>
+			<string>FwRuntimeServices.efi</string>
 			<string>VirtualSmc.efi</string>
 			<string>UsbKbDxe.efi</string>
-			<string>AptioMemoryFix.efi</string>
+			<string>#AptioMemoryFix.efi</string>
+			<string>#VBoxHfs.efi</string>
+			<string>#NvmExpressDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
