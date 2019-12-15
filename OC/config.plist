@@ -351,88 +351,100 @@
 			<dict>
 				<key>AAPL00,override-no-connect</key>
 				<data>AP///////wAGEHycAAAAAAoWAQSVIxN46gz1oFtVkiYMUFQAAAABAQEBAQEBAQEBAQEBAQEBuUOAoHA4H0AwIGQA4A4RAAAYWE2AGHE4LUBYLEUA4A4RAAAeLlKAGHE4LUBYLEUA4A4RAAAeAAAAEAAAAAAAAAAAAAAAAAAAAHI=</data>
+				<key>model</key>
+				<string>Intel Iris Pro Graphics 5200</string>
 				<key>AAPL,GfxYTile</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				BwAmDQ==
-				</data>
+				<data>BwAmDQ==</data>
+				<key>device-id</key>
+				<data>Jg0AAA==</data>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
+				<key>enable-hdmi20</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-flags</key>
+				<data>OAAAAA==</data>
+				<key>framebuffer-con0-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con1-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con1-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con2-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con2-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-con3-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con3-pipe</key>
+				<data>EgAAAA==</data>
+				<key>framebuffer-flags</key>
+				<data>HgOAAA==</data>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>hda-gfx</key>
+				<string>onboard-1</string>
+			</dict>
+			<key>#PciRoot(0x0)/Pci(0x2,0x0)</key>
+			<dict>
+				<key>AAPL00,override-no-connect</key>
+				<data>AP///////wAGEHycAAAAAAoWAQSVIxN46gz1oFtVkiYMUFQAAAABAQEBAQEBAQEBAQEBAQEBuUOAoHA4H0AwIGQA4A4RAAAYWE2AGHE4LUBYLEUA4A4RAAAeLlKAGHE4LUBYLEUA4A4RAAAeAAAAEAAAAAAAAAAAAAAAAAAAAHI=</data>
+				<key>model</key>
+				<string>Intel Iris Pro Graphics 5200</string>
+				<key>AAPL,GfxYTile</key>
+				<data>AQAAAA==</data>
+				<key>AAPL,ig-platform-id</key>
+				<data>BwAmDQ==</data>
 				<key>AAPL,slot-name</key>
 				<string>Internal@0,2,0</string>
 				<key>device-id</key>
-				<data>
-				Jg0AAA==
-				</data>
+				<data>Jg0AAA==</data>
 				<key>device_type</key>
 				<string>VGA compatible controller</string>
 				<key>disable-external-gpu</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi-dividers-fix</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con0-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con0-flags</key>
-				<data>
-				OAAAAA==
-				</data>
+				<data>OAAAAA==</data>
 				<key>framebuffer-con0-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>EgAAAA==</data>
 				<key>framebuffer-con1-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con1-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>EgAAAA==</data>
 				<key>framebuffer-con2-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con2-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>EgAAAA==</data>
 				<key>framebuffer-con3-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con3-pipe</key>
-				<data>
-				EgAAAA==
-				</data>
+				<data>EgAAAA==</data>
+				<key>framebuffer-fbmem</key>
+				<data>AAAAAw==</data>
 				<key>framebuffer-flags</key>
-				<data>
-				HgOAAA==
-				</data>
+				<data>HgOAAA==</data>
 				<key>framebuffer-patch-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
+				<key>framebuffer-stolenmem</key>
+				<data>AAAACA==</data>
+				<key>#framebuffer-stolenmem</key>
+				<integer>128</integer>
 				<key>framebuffer-unifiedmem</key>
-				<data>
-				AAAAgA==
-				</data>
+				<data>AAAAgA==</data>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
-				<key>model</key>
-				<string>Intel HD Graphics 530</string>
 			</dict>
-
 		</dict>
 		<key>Block</key>
 		<dict>
