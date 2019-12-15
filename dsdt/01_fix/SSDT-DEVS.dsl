@@ -64,9 +64,9 @@ DefinitionBlock ("", "SSDT", 2, "ACDT", "DEVS", 0x00001000)
          Name (_ADR, Zero)
     }
     
-    Device (_SB.PCI0.IMEI){
-         Name (_ADR, 0x00160000)
-    }
+//    Device (_SB.PCI0.IMEI){
+//         Name (_ADR, 0x00160000)
+//    }
     
     
     Device (_SB.PCI0.SBUS.BUS0)
