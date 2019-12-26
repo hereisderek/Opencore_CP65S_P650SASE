@@ -654,8 +654,6 @@
 				<key>BundlePath</key>
 				<string>3840x2160_DisplayMergeNub.kext</string>
 			</dict>
-			
-
 			<dict>
 				<key>BundlePath</key>
 				<string>AirportBrcmFixup.kext</string>
@@ -690,8 +688,20 @@
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
-
-
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>MatchKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/USBInjectAll</string>
+				<key>BundlePath</key>
+				<string>USBInjectAll.kext</string>
+			</dict>
 		</array>
 		<key>Block</key>
 		<array>
